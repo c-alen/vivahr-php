@@ -1,0 +1,36 @@
+{
+    "name": "vivahr/vivahr-php",
+    "description": "A PHP SDK for integrating with the VIVAHR API, supporting job posting, candidate management, and more.",
+    "type": "library",
+    "require": {
+        "php": ">=7.0",
+        "guzzlehttp/guzzle": "^7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0",
+        "phpstan/phpstan": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "VIVAHR\\": "src/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "analyse": "phpstan analyse"
+    },
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "authors": [
+        {
+            "name": "Alen Celic",
+            "email": "alen.celic@vivahr.com",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/vivahr/api-sdk/issues",
+        "source": "https://github.com/vivahr/api-sdk"
+    }
+}
