@@ -39,6 +39,8 @@ $api_url = 'https://auth.vivahr.com';
 // Use this for Sandbox testing
 $api_url = 'https://api-sandbox.vivahr.com';
 
+$auth_token_path = '/oauth/token';
+
 $auth = new Authentication($client_id , $client_secret, $api_url . $auth_token_path);
 $accessTokenData = $auth->generateAccessToken();
 $accessToken = $accessTokenData['access_token'];
