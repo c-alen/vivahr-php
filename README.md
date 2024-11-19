@@ -57,16 +57,18 @@ $vivahrClient = new VivahrClient($accessToken, $api_url);
 ### Now you can make calls to the endpoints
 
 ```php
-$response = VivahrClient::jobs()->list([
-	"offset"         => "",
-	"limit"          => "",
-	"keyword"        => "",
-	"department_id"  => "",
-	"location_id"    => "",
-	"sort_field"     => "",
-	"sort_direction" => "",
-	"hide_inactive"  => ""
-]); 
+
+$jobs = $vivahrClient->jobs()->list([
+    "offset"=> "",
+    "limit"=> "",
+    "keyword"=> "",
+    "department_id"=> "",
+    "location_id"=> "",
+    "sort_field"=> "",
+    "sort_direction"=> "",
+    "hide_inactive"=> ""
+]);
+echo json_encode($jobs);
 ```
 
 ## Available Endpoints
