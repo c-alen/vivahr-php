@@ -30,8 +30,8 @@ require 'vendor/autoload.php';
 ```php
 use VIVAHR\Auth\Authentication;
 
-$client_id = getenv('CLIENT_ID');
-$client_secret = getenv('CLIENT_SECRET');
+$client_id = 'XXXXXXXXXX';
+$client_secret = 'XXXXXXXXXXXXXXXX';
 
 // Use this for Production
 $api_url = 'https://auth.vivahr.com';
