@@ -142,7 +142,7 @@ This SDK follows Semantic Versioning. Check the [changelog](https://github.com/c
 
 ## Documentation
 
-For detailed API specifications, visit the [VIVAHR API Documentation](https://docs.vivahr.com).
+For detailed API specifications, visit the [VIVAHR API Documentation](https://developer.vivahr.com).
 
 ## Error Handling
 
