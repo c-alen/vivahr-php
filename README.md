@@ -27,12 +27,12 @@ require 'vendor/autoload.php';
 ```php
 use VIVAHR\Auth\Authentication;
 
-$client_id = getEnv('CLIENT_ID');
-$client_secret = getEnv('CLIENT_SECRET');
+$client_id = getenv('CLIENT_ID');
+$client_secret = getenv('CLIENT_SECRET');
 
 // PRODUCTION API URL - https://auth.vivahr.com
 // SANDBOX API URL - https://api-sandbox.vivahr.com
-$api_url = getEnv('VIVAHR_API_URL');
+$api_url = getenv('VIVAHR_API_URL');
 
 $auth_token_path = '/oauth/token';
 
