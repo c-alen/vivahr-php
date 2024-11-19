@@ -49,7 +49,7 @@ $accessToken = $accessTokenData['access_token'];
 ### Step 2: Initialize the client
 
 ```php
-use VIVAHR\Clients\VivahrClient;
+use VIVAHR\VivahrClient;
 
 $vivahrClient = new VivahrClient($accessToken, $api_url);
 ```
