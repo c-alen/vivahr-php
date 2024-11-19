@@ -12,7 +12,10 @@ composer require vivahr/vivahr-php
 
 ## Requirements
 
-Make sure you have PHP version 7.0 or higher.
+Make sure you have:
+
+- PHP 7.0 or higher
+- Composer
 
 ## Usage
 
@@ -30,13 +33,13 @@ use VIVAHR\Auth\Authentication;
 $client_id = getenv('CLIENT_ID');
 $client_secret = getenv('CLIENT_SECRET');
 
-// PRODUCTION API URL - https://auth.vivahr.com
-// SANDBOX API URL - https://api-sandbox.vivahr.com
-$api_url = getenv('VIVAHR_API_URL');
+// Use this for Production
+$api_url = 'https://auth.vivahr.com';
 
-$auth_token_path = '/oauth/token';
+// Use this for Sandbox testing
+$api_url = 'https://api-sandbox.vivahr.com';
 
-$auth = new Authentication($client_id , $client_secret, $api_url.$auth_token_path);
+$auth = new Authentication($client_id , $client_secret, $api_url . $auth_token_path);
 $accessTokenData = $auth->generateAccessToken();
 $accessToken = $accessTokenData['access_token'];
 ```
@@ -44,6 +47,8 @@ $accessToken = $accessTokenData['access_token'];
 ### Step 2: Initialize the client
 
 ```php
+use VIVAHR\Clients\VivahrClient;
+
 $vivahrClient = new VivahrClient($accessToken, $api_url);
 ```
 
@@ -126,6 +131,18 @@ Utilize tags to organize and categorize candidates for easier management.
 
 ### Helpers
 Access helper functions that assist with various functionalities across the SDK.
+
+### Reporting Issues
+
+Found a bug or have a suggestion? Please [open an issue](https://github.com/c-alen/vivahr-php/issues) on our GitHub repository.
+
+## Versioning
+
+This SDK follows Semantic Versioning. Check the [changelog](https://github.com/c-alen/vivahr-php/releases) for updates.
+
+## Documentation
+
+For detailed API specifications, visit the [VIVAHR API Documentation](https://docs.vivahr.com).
 
 ## Error Handling
 
