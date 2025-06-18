@@ -23,7 +23,7 @@ class Candidates
      */
     public function create(array $data)
     {
-        return $this->client->request('POST', $this->endpoint , ['form_params' => $data]);
+        return $this->client->request('POST', $this->endpoint, ['multipart' => $data]);
     }
 
     /**
